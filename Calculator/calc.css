@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  #calculator {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    max-width: 300px;
+  }
+  
+  #calculator section {
+    margin-bottom: 10px;
+  }
+  
+  #calculator button {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    /* background-color: #242424; */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  
+  
+  /* #calculator button:hover {
+    background-color: #45a049;
+  } */
+  
+  #display {
+    width: 100%;
+    background-color: #e7e7e7;
+    color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    border-radius: 4px;
+    font-size: 1.5em;
+    min-height: 50px;
+    box-sizing: border-box;
+  }
+  
+  #row1 {
+    display: flex;
+  }
+  
+  #resetKey {
+    flex: 3; /* 75% of the space */
+    background-color: gray;
+  }
+
+#resetKey:hover {
+    background-color: white;
+    color: #242424;
+}
+  
+  #divisionKey {
+    flex: 1; /* 25% of the space */
+  }
+  
+  /* Operator buttons */
+  #divisionKey,
+  #multiplicationKey,
+  #subtractionKey,
+  #additionKey,
+  #equalKey {
+    flex: 1; /* Equal size for all operators */
+    background-color: orange;
+  }
+
+  #divisionKey:hover,
+  #multiplicationKey:hover,
+  #subtractionKey:hover,
+  #additionKey:hover,
+  #equalKey:hover {
+    background-color: white;
+    color: orange;
+  }
+
+  
+  /* Number buttons */
+  #sevenKey,
+  #eightKey,
+  #nineKey,
+  #fourKey,
+  #fiveKey,
+  #sixKey,
+  #oneKey,
+  #twoKey,
+  #threeKey,
+  #zeroKey {
+    flex: 2; /* Twice the space of an operator button */
+    background-color: #242424;
+  }
+
+  #sevenKey:hover,
+  #eightKey:hover,
+  #nineKey:hover,
+  #fourKey:hover,
+  #fiveKey:hover,
+  #sixKey:hover,
+  #oneKey:hover,
+  #twoKey:hover,
+  #threeKey:hover,
+  #zeroKey:hover {
+    background-color: #424242;
+  }
+  
+  /* All rows except the first one */
+  #row2,
+  #row3,
+  #row4,
+  #row5 {
+    display: flex;
+  }
+  
+  /* Operator buttons */
+  #divisionKey,
+  #multiplicationKey,
+  #subtractionKey,
+  #additionKey,
+  #equalKey {
+    flex: 0 0 25%; /* No growth, no shrink, and set to 25% of the parent's width */
+  }
+  
+  /* Number buttons */
+  #sevenKey,
+  #eightKey,
+  #nineKey,
+  #fourKey,
+  #fiveKey,
+  #sixKey,
+  #oneKey,
+  #twoKey,
+  #threeKey,
+  #zeroKey {
+    flex-grow: 1; /* Allow number buttons to grow and fill remaining space */
+  }
+  
+  @media (max-width: 900px) {
+    #calculator {
+      width: 80%;
+      padding: 10px;
+    }
+  
+    #calculator button {
+      padding: 5px 10px;
+      font-size: 0.9em;
+    }
+  
+    #display {
+      font-size: 1em;
+      padding: 8px;
+    }
+  }

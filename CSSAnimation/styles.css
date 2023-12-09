@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure the body takes up the full height of the viewport */
+  }
+  
+  #slider {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    transition: transform 1s, background-color 2s;
+  }
+  
